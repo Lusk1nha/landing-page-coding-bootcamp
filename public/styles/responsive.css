@@ -1,0 +1,51 @@
+@media screen and (min-width: 650px) {
+  body {
+    min-height: 100vh;
+
+  }
+
+  #mainContainer {
+    max-width: 800px;
+    flex-direction: row-reverse;
+
+  }
+
+  #sliderContainer {
+    min-width: 400px;
+
+  }
+
+  .bg-slider-image {
+    height: 450px;
+    top: -15px;
+
+  }
+
+  #textContainer {
+    min-width: 250px; 
+    width: 100%;
+    
+    text-align: start;
+
+  }
+
+  #textContainer .motivational-text {
+    width: 115%;
+
+    font-size: 1.5rem;
+
+    margin-right: -120px;
+
+    z-index: 2;
+    
+  }
+
+  .bg-curve-image {
+    width: 400px;
+    height: 150px;
+
+    bottom: 0;
+    left: 0;
+
+  }
+}
