@@ -27,7 +27,6 @@ body {
 
   padding: 50px 30px 20px;
 
-  overflow: hidden;
 
 }
 
@@ -142,7 +141,7 @@ body {
 
 #textContainer .motivational-text {
   color: var(--color-1);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
 
   margin-bottom: 15px;
@@ -180,11 +179,23 @@ body {
   height: 120px;
 
   position: absolute;
-  bottom: -40px;
+  bottom: -50px;
   left: -20px;
 
   z-index: -1;
 
   overflow: none;
+
+}
+
+@media screen and (max-width: 350px ) {
+  #textContainer .motivational-text {
+    color: var(--color-1);
+    font-size: 1.1rem;
+    font-weight: 300;
+  
+    margin-bottom: 15px;
+  
+  }
 
 }
