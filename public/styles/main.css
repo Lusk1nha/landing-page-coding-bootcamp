@@ -175,11 +175,11 @@ body {
 }
 
 .bg-curve-image {
-  width: 90%;
-  height: 120px;
+  width: 80%;
+  height: 80px;
 
   position: absolute;
-  bottom: -50px;
+  bottom: 0px;
   left: -20px;
 
   z-index: -1;
