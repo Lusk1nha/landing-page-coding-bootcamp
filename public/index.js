@@ -1,57 +1,53 @@
-const btnHere = document.querySelector('.change')
+const sliderButtons = document.querySelectorAll('.arrow')
 
-const persons = {
-  'tanya': {
-    path: 'tanya',
-    name: 'Tanya Sinclair',
-    text: `“ I’ve been interested in coding for a while but never taken the jump, until now. 
-    I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-    excited about the future. ”`,
-    career: 'UX Engineer'
-
+const persons = [{
+  image: './assets/image-tanya.jpg',
+  name: 'Tanya Sinclair',
+  quote: `“ I’ve been interested in coding for a while but never taken the jump, until now. 
+  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+  excited about the future. ”`,
+  career: 'UX Engineer'
   },
-  'john': {
-    path: 'john',
+  {
+    image: './assets/image-john.jpg',
     name: 'John Tarkpor',
-    text: `“ If you want to lay the best foundation possible I’d recommend taking this course. 
+    quote: `“ If you want to lay the best foundation possible I’d recommend taking this course. 
     The depth the instructors go into is incredible. I now feel so confident about 
     starting up as a professional developer. ”`,
     career: 'Junior Front-end Developer'
-  }
-}
+  },
+]
 
-let index = 0
-btnHere.addEventListener('click', () => {
-  let path
-  let text
-  let name
-  let career
+let sliderCounter = 1
+sliderButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if ( sliderCounter >= persons.length) sliderCounter = 0
 
-  if ( index % 2 == 0 ) {
-    path = persons['john'].path
-    name = persons['john'].name
-    text = persons['john'].text
-    career = persons['john'].career
+    const image = persons[sliderCounter].image
+    const quote = persons[sliderCounter].quote
+    const name = persons[sliderCounter].name
+    const career = persons[sliderCounter].career
 
-  } else {
-    path = persons['tanya'].path
-    name = persons['tanya'].name
-    text = persons['tanya'].text
-    career = persons['tanya'].career
+    const mainContainer = document.querySelector('#mainContainer')
+    mainContainer.classList.add('fade')
 
-  }
+    setTimeout(() => {
+      mainContainer.classList.remove('fade')
 
-  const personImg = document.querySelector('.personImage')
-  personImg.src = `./assets/image-${path}.jpg`
+    }, 1000)
+    
+    const personImg = document.querySelector('.personImage')
+    personImg.src = image
 
-  const motivationalText = document.querySelector('.motivational-text')
-  motivationalText.innerHTML = text
-
-  const personName = document.querySelector('.name')
-  personName.innerHTML = name
-
-  const personCareer = document.querySelector('.career')
-  personCareer.innerHTML = career
-
-  index++
+    const motivationalQuote = document.querySelector('.motivational-quote')
+    motivationalQuote.innerHTML = quote
+  
+    const personName = document.querySelector('.name')
+    personName.innerHTML = name
+  
+    const personCareer = document.querySelector('.career')
+    personCareer.innerHTML = career    
+    
+    sliderCounter++
+  })
 })

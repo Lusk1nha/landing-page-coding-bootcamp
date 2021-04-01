@@ -27,8 +27,6 @@ body {
 
   padding: 50px 30px 20px;
 
-  transition: 0.5s;
-
 }
 
 #mainContainer {
@@ -39,6 +37,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
+  opacity: 100%;
+
+  transition: 0.5s;
 
 }
 
@@ -58,7 +60,6 @@ body {
 
   z-index: 2;
   
-
 }
 
 .bg-slider-image {
@@ -104,6 +105,8 @@ body {
 
   box-shadow: 0 5px 20px 10px rgba(0, 0, 150, 0.1);
 
+  z-index: 3;
+
 }
 
 .arrows-container img {
@@ -144,7 +147,7 @@ body {
 
 }
 
-#textContainer .motivational-text {
+#textContainer .motivational-quote {
   color: var(--color-1);
   font-size: 1.3rem;
   font-weight: 300;
@@ -193,8 +196,28 @@ body {
 
 }
 
+#mainContainer.fade .personImage,
+#mainContainer.fade .motivational-quote,
+#mainContainer.fade .personInfos {
+  animation-name: slider-animation;
+  animation-duration: 1.3s;
+
+}
+
+@keyframes slider-animation {
+ from {
+  opacity: 0%;
+
+ }
+ to {
+  opacity: 100%;
+
+ }
+
+}
+
 @media screen and (max-width: 350px ) {
-  #textContainer .motivational-text {
+  #textContainer .motivational-quote {
     color: var(--color-1);
     font-size: 1.1rem;
     font-weight: 300;

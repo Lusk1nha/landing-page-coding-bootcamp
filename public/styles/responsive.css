@@ -5,13 +5,19 @@
   }
 
   #mainContainer {
-    max-width: 800px;
+    max-width: 1100px;
     flex-direction: row-reverse;
 
   }
 
   #sliderContainer {
+    max-width: 650px;
     min-width: 400px;
+
+  }
+
+  #sliderContainer .personImage {
+    height: 400px;
 
   }
 
@@ -29,12 +35,12 @@
 
   }
 
-  #textContainer .motivational-text {
+  #textContainer .motivational-quote {
     width: 115%;
 
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 
-    margin-right: -120px;
+    margin-right: -160px;
 
     z-index: 2;
     
@@ -48,4 +54,22 @@
     left: 0;
 
   }
+
+  #textContainer .personInfos {
+    flex-direction: row;
+
+    margin-right: -80px;
+
+    text-align: start;
+    justify-content: flex-start;
+
+  }
+
+  .personInfos .name {
+    font-size: 1.15rem;
+
+    margin-right: 15px;
+
+  }
+
 }
