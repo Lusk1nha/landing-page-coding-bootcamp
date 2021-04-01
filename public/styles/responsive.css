@@ -11,7 +11,7 @@
   }
 
   #sliderContainer {
-    max-width: 650px;
+    max-width: 750px;
     min-width: 400px;
 
   }
@@ -22,14 +22,15 @@
   }
 
   #sliderContainer .personImage {
-    height: 400px;
+    height: 450px;
 
   }
 
   .bg-slider-image {
-    width: 90%;
-    height: 100%;
-    top: -15px;
+    width: 100%;
+    height: 112%;
+    
+    top: -45px;
 
   }
 
@@ -41,10 +42,18 @@
 
   }
 
+  .bg-quotes-image {
+    width: 85px;
+    height: 70px;
+
+    left: 35%;
+
+  }
+
   #textContainer .motivational-quote {
     width: 115%;
 
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 
     margin-right: -160px;
 
