@@ -16,13 +16,19 @@
 
   }
 
+  #sliderContainer .arrows-container {
+    margin-left: -40%;
+
+  }
+
   #sliderContainer .personImage {
     height: 400px;
 
   }
 
   .bg-slider-image {
-    height: 450px;
+    width: 90%;
+    height: 100%;
     top: -15px;
 
   }
